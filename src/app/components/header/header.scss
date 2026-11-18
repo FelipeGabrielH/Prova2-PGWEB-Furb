@@ -1,0 +1,29 @@
+.header-index {
+    background-color: #254D3A;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+    box-sizing: border-box;
+}
+
+.header-index a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    gap: 10px;
+    font-size: 200%;
+}
+
+.logo-pet {
+    width: 50px;
+    border-radius: 10px;
+}
+
+#usuario {
+    color: white;
+    font-size: 100%;
+}

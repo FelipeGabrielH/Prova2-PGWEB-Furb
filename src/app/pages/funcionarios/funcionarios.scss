@@ -1,0 +1,56 @@
+.funcionarios-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 30px;
+}
+
+.card {
+    width: 250px;
+    background-color: white;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.foto-container {
+    width: 100%;
+    height: 200px;
+    background-color: black;
+}
+
+.foto-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nome {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.propriedade {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+.email {
+    background-color: gray;
+    padding: 10px;
+    font-family: Verdana, sans-serif;
+}
+
+.email a {
+    color: white;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.email a:hover {
+    text-decoration: underline;
+}
