@@ -1,11 +1,13 @@
+
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-navigator',
+  standalone: true,
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './navigator.html',
-  styleUrl: './navigator.scss',
+  styleUrl: './navigator.scss'
 })
 export class Navigator {
 

@@ -1,0 +1,75 @@
+
+<main class="cadastro-container">
+
+  <h1>Consulta de Cadastro</h1>
+
+  <section class="consulta">
+    <label for="idConsulta">ID do cadastro:</label>
+
+    <input
+      type="number"
+      id="idConsulta"
+      name="idConsulta"
+      [(ngModel)]="idConsulta"
+    >
+
+    <button type="button" (click)="consultar()">
+      Consultar
+    </button>
+  </section>
+
+  
+@if (cadastro) {
+  <div class="cadastro-grid">
+
+    <section class="dados-cadastro">
+      <h2>Dados encontrados</h2>
+
+      <p><strong>ID:</strong> {{ cadastro.id }}</p>
+      <p><strong>Nome:</strong> {{ cadastro.nome }}</p>
+      <p><strong>Departamento:</strong> {{ cadastro.departamento }}</p>
+      <p><strong>Endereço:</strong> {{ cadastro.endereco }}</p>
+      <p><strong>E-mail:</strong> {{ cadastro.email }}</p>
+
+      <button class="btn-excluir" type="button" (click)="excluir()">
+        Exclusão
+      </button>
+    </section>
+
+    <section class="alteracao">
+      <h2>Alterar Cadastro</h2>
+
+      <form (ngSubmit)="alterar()">
+
+        <label>Nome:</label>
+        <input type="text" name="nome" [(ngModel)]="cadastro.nome" required>
+
+        <label>Departamento:</label>
+        <input type="text" name="departamento" [(ngModel)]="cadastro.departamento" required>
+
+        <label>Endereço:</label>
+        <input type="text" name="endereco" [(ngModel)]="cadastro.endereco" required>
+
+        <label>E-mail:</label>
+        <input type="email" name="email" [(ngModel)]="cadastro.email" required>
+
+        <button type="submit">Alterar</button>
+
+      </form>
+    </section>
+
+  </div>
+}
+
+
+  @if (resultado) {
+    <div
+      class="mensagem"
+      [class.sucesso]="resultado.status === 'Ok'"
+      [class.erro]="resultado.status === 'Erro'"
+    >
+      {{ resultado.mensagem }}
+    </div>
+  }
+
+</main>

@@ -1,16 +1,9 @@
-<nav class="nav-index">
-    <ul>
-        <li>
-            <a routerLink="/" routerLinkActive="ativo"
-               [routerLinkActiveOptions]="{exact: true}">
-                HOME
-            </a>
-        </li>
 
-        <li>
-            <a routerLink="/funcionarios" routerLinkActive="ativo">
-                FUNCIONÁRIOS
-            </a>
-        </li>
-    </ul>
+<nav class="navbar">
+  <a routerLink="/" routerLinkActive="ativo"
+     [routerLinkActiveOptions]="{ exact: true }">HOME</a>
+
+  <a routerLink="/funcionarios" routerLinkActive="ativo">FUNCIONÁRIOS</a>
+
+  <a routerLink="/cadastro" routerLinkActive="ativo">CADASTRO</a>
 </nav>

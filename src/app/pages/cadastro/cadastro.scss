@@ -1,0 +1,106 @@
+
+.cadastro-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #254D3A;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.consulta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #254D3A;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #183528;
+}
+
+.dados-cadastro,
+.alteracao {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dados-cadastro p {
+  margin-bottom: 12px;
+}
+
+.btn-excluir {
+  background-color: #b52b2b;
+  margin-top: 10px;
+}
+
+.alteracao form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mensagem {
+  padding: 15px;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.sucesso {
+  background-color: green;
+}
+
+.erro {
+  background-color: red;
+}
+
+@media (max-width: 600px) {
+  .consulta {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+
+.cadastro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.dados-cadastro,
+.alteracao {
+  margin-top: 20px;
+  min-width: 0;
+}
+
+@media (max-width: 700px) {
+  .cadastro-grid {
+    grid-template-columns: 1fr;
+  }
+}
