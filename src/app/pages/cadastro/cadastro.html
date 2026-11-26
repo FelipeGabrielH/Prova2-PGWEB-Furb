@@ -18,6 +18,16 @@
     </button>
   </section>
 
+    @if (resultado) {
+    <div
+      class="mensagem"
+      [class.sucesso]="resultado.status === 'Ok'"
+      [class.erro]="resultado.status === 'Erro'"
+    >
+      {{ resultado.mensagem }}
+    </div>
+  }
+
   
 @if (cadastro) {
   <div class="cadastro-grid">
@@ -62,14 +72,6 @@
 }
 
 
-  @if (resultado) {
-    <div
-      class="mensagem"
-      [class.sucesso]="resultado.status === 'Ok'"
-      [class.erro]="resultado.status === 'Erro'"
-    >
-      {{ resultado.mensagem }}
-    </div>
-  }
+
 
 </main>
